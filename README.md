@@ -1,4 +1,4 @@
-A### React Movies - 1.0.0
+### React Movies - 1.0.0
 <p>Hasil belajar di channel Youtube Dea Afrizal</p>
 <p>Sebelum pakai lakukan hal berikut ini :</p>
 
