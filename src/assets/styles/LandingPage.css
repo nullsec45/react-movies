@@ -1,7 +1,7 @@
 .bg-container{
 	height: 100vh;
 	background: tomato;
-	background:url("../images/bg/main.jpg");
+	background:url("http://localhost:5000/images/bg/main.jpg");
 	background-size: cover;
 }
 
@@ -23,14 +23,21 @@
 .trending{
 	height: auto;
 	padding-bottom: 20px;
-	background: url("../images/bg/spiderman.jpg");
+	background: url("http://localhost:5000/images/bg/spiderman.jpg");
 	background-size: cover
 }
 
 .superhero{
 	height: auto;
 	padding-bottom: 20px;
-	background: url("../images/bg/scifi.jpg");
+	background: url("http://localhost:5000/images/bg/car.jpg");
+	background-size: cover
+}
+
+.search{
+	height: auto;
+	padding-bottom: 20px;
+	background: url("http://localhost:5000/images/bg/romance.jpg");
 	background-size: cover
 }
 .imgMovie{
