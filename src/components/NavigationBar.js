@@ -9,6 +9,7 @@ const NavigationBar=() => {
 	          <Nav>
 	            <Nav.Link href="#trending">Trending</Nav.Link>
 	            <Nav.Link href="#superhero">Superhero</Nav.Link>
+	            <Nav.Link href="#search">Search Movies</Nav.Link>
 	          </Nav>
 	        </Container>
 	      </Navbar>
