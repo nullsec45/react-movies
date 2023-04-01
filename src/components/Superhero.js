@@ -1,80 +1,45 @@
-import {Card,Col, Row, Container} from "react-bootstrap";
-import antmanImage from "../assets/images/superhero/antman.jpg";
-import avengerImage from "../assets/images/superhero/avenger.jpg";
-import batmanImage from "../assets/images/superhero/batman.jpg";
-import robinhoodImage from "../assets/images/superhero/robinhood.jpg";
-import spidermanCover from "../assets/images/superhero/spiderman-cover.jpg";
+import { Card, Col, Row, Container } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const Superhero=() =>
-{
+const Superhero = () => {
+	const [movies, setMovies] = useState([]);
+
+	useEffect(() => {
+		getMovies();
+	}, []);
+
+	const getMovies = async () => {
+		const response = await axios.get("http://localhost:5000/movies");
+		// console.log(response.data[1]);
+		setMovies(response.data[1]);
+	}
 	return (
 		<div>
 			<Container>
-				<Row id="superhero">
+				<Row id="trending">
 					<Col>
-				      <h1 className="text-center text-white mt-4">Superhero Movies</h1>
+						<h1 className="text-center text-white mt-4">Trending Movies</h1>
 					</Col>
 				</Row>
-				<Row className="mt-4" id="superhero">
-				   {/*film 1*/}
-					<Col xs={3}>
-					  <Card>
-					      <Card.Img variant="top" src={antmanImage} className="imgMovie" />
-					      <Card.Body>
-					        <Card.Title>Card Title</Card.Title>
-					        <Card.Text>
-					          Some quick example text to build on the card title and make up the
-					          bulk of the card's content.
-					        </Card.Text>
-					      </Card.Body>
-					   </Card>
-					</Col>
-
-				    {/*film2*/}
-					<Col xs={3}>
-					  <Card>
-					      <Card.Img variant="top" src={avengerImage} className="imgMovie" />
-					      <Card.Body>
-					        <Card.Title>Card Title</Card.Title>
-					        <Card.Text>
-					          Some quick example text to build on the card title and make up the
-					          bulk of the card's content.
-					        </Card.Text>
-					      </Card.Body>
-					   </Card>
-					</Col>
-
-				   {/*film 3*/}
-				   <Col xs={3}>
-					  <Card>
-					      <Card.Img variant="top" src={batmanImage} className="imgMovie" />
-					      <Card.Body>
-					        <Card.Title>Card Title</Card.Title>
-					        <Card.Text>
-					          Some quick example text to build on the card title and make up the
-					          bulk of the card's content.
-					        </Card.Text>
-					      </Card.Body>
-					   </Card>
-					</Col>
-
-					{/*film 4*/}
-					<Col xs={3}>
-					  <Card>
-					      <Card.Img variant="top" src={robinhoodImage} className="imgMovie" />
-					      <Card.Body>
-					        <Card.Title>Card Title</Card.Title>
-					        <Card.Text>
-					          Some quick example text to build on the card title and make up the
-					          bulk of the card's content.
-					        </Card.Text>
-					      </Card.Body>
-					   </Card>
-					</Col>
+				<Row className="mt-4" >
+					{/*film 1*/}
+					{movies.map((movie, index) => (
+						<Col xs={3} key={index}>
+							<Card>
+								<Card.Img variant="top" src={movie.image} className="imgMovie" />
+								<Card.Body>
+									<Card.Title>{movie.title}</Card.Title>
+									<Card.Text>
+										{movie.body}
+									</Card.Text>
+								</Card.Body>
+							</Card>
+						</Col>
+					))}
 				</Row>
 			</Container>
 		</div>
 	);
 }
-
 export default Superhero;
