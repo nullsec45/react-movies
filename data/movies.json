@@ -1,0 +1,46 @@
+[
+    [
+        {
+            "image":"http://localhost:5000/images/trending/dune.jpg",
+            "title":"Dune",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/trending/everything.jpg",
+            "title":"Everything",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/trending/infinite.jpg",
+            "title":"Infinite Storm",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/trending/joker.jpg",
+            "title":"Joker",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        }
+    ],
+    [
+        {
+            "image":"http://localhost:5000/images/superhero/antman.jpg",
+            "title":"Antman",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/superhero/avenger.jpg",
+            "title":"Avengers Endgame",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/superhero/batman.jpg",
+            "title":"Batman - The Dark Knight",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "image":"http://localhost:5000/images/superhero/robinhood.jpg",
+            "title":"Robin Hood",
+            "body":"Some quick example text to build on the card title and make up the bulk of the card's content."
+        }    
+    ]
+]
