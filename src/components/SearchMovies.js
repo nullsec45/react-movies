@@ -13,7 +13,7 @@ const SearchMovies = () => {
 		let searchTitle = new RegExp(title, "gi")
 		let dataMovies = [];
 
-		if (title.trim("") == "") {
+		if (title.trim("") === "") {
 			alert("Input tidak boleh kosong!");
 			return false;
 		}
